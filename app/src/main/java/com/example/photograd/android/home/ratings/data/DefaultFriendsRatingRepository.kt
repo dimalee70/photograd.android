@@ -1,0 +1,24 @@
+package com.example.photograd.android.home.ratings.data
+
+import com.example.photograd.android.base.BaseRepository
+import com.example.photograd.android.home.ratings.data.FriendsRatingRepository
+import com.example.photograd.android.home.ratings.data.model.RatingData
+import io.reactivex.Single
+import photograd.kz.photograd.models.ApiMethods
+
+/**
+ * Created by wokrey@gmail.com on 9/3/19.
+ * It's not wokrey, if the code smells bad. Somebody set me up.
+ */
+class DefaultFriendsRatingRepository
+    :BaseRepository(), FriendsRatingRepository{
+
+    override fun getRatings(): Single<RatingData> {
+
+        return makeSocketRequest(
+            model = null,
+            method = ApiMethods.GET_FRIENDS_RATING,
+            classOf = RatingData::class.java
+        )
+    }
+}

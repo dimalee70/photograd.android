@@ -16,4 +16,7 @@
     <dimen name="items_margin_start_end">10dp</dimen>
     <dimen name="items_margin_top_bottom">5dp</dimen>
     <dimen name="duel_img_size">64dp</dimen>
+
+    <dimen name="rating_img_size">40dp</dimen>
+    <dimen name="rating_top_img_size">135dp</dimen>
 </resources>

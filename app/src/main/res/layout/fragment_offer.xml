@@ -5,7 +5,6 @@
 
     <data>
 
-
         <variable
             name="info"
             type="com.example.photograd.android.home.store.details.data.OfferInfo" />
@@ -49,6 +48,65 @@
                     android:scaleType="centerCrop"
                     app:layout_collapseMode="parallax"
                     app:testImg="@{``}" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_days"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="2 дня"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/img_timer"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:src="@drawable/ic_time"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_days"
+                        app:layout_constraintDimensionRatio="H,1:1"
+                        app:layout_constraintStart_toEndOf="@+id/tv_days"
+                        app:layout_constraintTop_toTopOf="@+id/tv_days" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="23"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/img_apple"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/img_apple"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:src="@drawable/apple"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView"
+                        app:layout_constraintDimensionRatio="H,1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/textView"
+                        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+                    <TextView
+                        android:id="@+id/tv_restrictions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="TextView"
+                        app:layout_constraintBottom_toBottomOf="@+id/img_apple"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/img_apple" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.appcompat.widget.Toolbar
                     android:id="@+id/toolbar_fragment_news"
@@ -152,7 +210,7 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginTop="8dp"
-                    android:src="@drawable/ic_duel_energy"
+                    android:src="@drawable/ic_instagram"
                     app:layout_constraintDimensionRatio="H,1:1"
                     app:layout_constraintEnd_toEndOf="@+id/ib_website"
                     app:layout_constraintStart_toStartOf="@+id/ib_website"

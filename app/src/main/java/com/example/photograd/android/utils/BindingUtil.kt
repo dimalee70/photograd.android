@@ -16,6 +16,8 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.example.photograd.android.BR
 import com.example.photograd.android.R
+import com.example.photograd.android.custom.RoundedCornersTransformation
+import com.google.android.material.shape.RoundedCornerTreatment
 
 /**
  * Created by wokrey@gmail.com on 8/16/19.
@@ -43,10 +45,26 @@ object BindingUtil {
         circularProgressDrawable.centerRadius = 30f
         circularProgressDrawable.start()
 
+        val corners = RoundedCornersTransformation(radius = 14f, cornerType = RoundedCornersTransformation.CornerType.TOP)
         Glide
             .with(view.context)
             .load(url)
-            .diskCacheStrategy(DiskCacheStrategy.NONE)
+            .transform(corners)
+            .placeholder(circularProgressDrawable)
+            .into(view)
+    }
+
+    @JvmStatic
+    @BindingAdapter("img")
+    fun loadImg(view: ImageView, url: String?) {
+        val circularProgressDrawable = CircularProgressDrawable(view.context)
+        circularProgressDrawable.strokeWidth = 5f
+        circularProgressDrawable.centerRadius = 30f
+        circularProgressDrawable.start()
+
+        Glide
+            .with(view.context)
+            .load(url)
             .transform(RoundedCorners(14))
             .placeholder(circularProgressDrawable)
             .into(view)
@@ -81,8 +99,6 @@ object BindingUtil {
         Glide
             .with(view.context)
             .load("https://sun9-2.userapi.com/c847220/v847220070/1e2b5d/lI4r08edp3E.jpg")
-            .centerCrop()
-            .diskCacheStrategy(DiskCacheStrategy.NONE)
             .transform(RoundedCorners(14))
             .placeholder(circularProgressDrawable)
             .into(view)

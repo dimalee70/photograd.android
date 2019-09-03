@@ -6,6 +6,8 @@ import androidx.fragment.app.FragmentStatePagerAdapter
 import com.example.photograd.android.home.games.presentation.CurrentGamesFragment
 import com.example.photograd.android.home.games.presentation.DuelsFragment
 import com.example.photograd.android.home.games.presentation.MissionsFragment
+import com.example.photograd.android.home.ratings.presentation.FriendsRatingFragment
+import com.example.photograd.android.home.ratings.presentation.RatingFragment
 import com.example.photograd.android.home.store.presentation.StoreCategoryFragment
 
 /**
@@ -26,6 +28,8 @@ class HomeViewPagerAdapter(
             MissionsFragment.TAG -> return MissionsFragment.newInstance()
             DuelsFragment.TAG -> return DuelsFragment.newInstance()
             StoreCategoryFragment.TAG -> return StoreCategoryFragment.newInstance(id = tagger.getId(position)!!)
+            RatingFragment.TAG -> return RatingFragment.newInstance()
+            FriendsRatingFragment.TAG -> return FriendsRatingFragment.newInstance()
             else -> return CurrentGamesFragment.newInstance()
         }
     }

@@ -28,5 +28,6 @@
     <color name="color_offer_bg">#18223A</color>
     <color name="color_dark_bg">#0f182d</color>
     <color name="color_mission_item_bg">#0f182d</color>
+    <color name="color_rating_tv">#F5CF6F</color>
 
 </resources>

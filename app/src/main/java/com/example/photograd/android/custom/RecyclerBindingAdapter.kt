@@ -65,6 +65,7 @@ class RecyclerBindingAdapter<T>(
     fun setItems(items: List<T>?) {
         if (items != null) {
             this.items = items
+            notifyDataSetChanged()
         }
     }
 }

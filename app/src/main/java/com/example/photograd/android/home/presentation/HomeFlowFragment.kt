@@ -14,6 +14,8 @@ import com.example.photograd.android.home.domain.HomeFlowPresenter
 import com.example.photograd.android.home.domain.HomeFlowView
 import com.example.photograd.android.home.games.presentation.CurrentGamesFragment
 import com.example.photograd.android.home.games.presentation.MissionsFragment
+import com.example.photograd.android.home.ratings.presentation.FriendsRatingFragment
+import com.example.photograd.android.home.ratings.presentation.RatingFragment
 import com.example.photograd.android.home.store.presentation.StoreCategoryFragment
 import com.example.photograd.android.utils.DataHolder
 import com.google.android.material.tabs.TabLayout
@@ -62,7 +64,7 @@ class HomeFlowFragment : BaseFragment(), HomeFlowView, Tagger {
             hasCurrentGames = DataHolder.hasCurrentGame,
             hasPurchases = DataHolder.hasPurchases
         )
-        binding.vpMain.adapter = HomeViewPagerAdapter(childFragmentManager!!, pagesCount = pagesCount, tagger = this)
+        binding.vpMain.adapter = HomeViewPagerAdapter(childFragmentManager, pagesCount = pagesCount, tagger = this)
         binding.vpMain.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(binding.tabLayoutMain))
     }
 
@@ -102,10 +104,14 @@ class HomeFlowFragment : BaseFragment(), HomeFlowView, Tagger {
             binding.tabLayoutMain.addTab(binding.tabLayoutMain.newTab().setText(categories[i].title))
             addPagerElement(tag = StoreCategoryFragment.TAG, id = categories[i].id)
         }
+
+        binding.tabLayoutMain.addTab(binding.tabLayoutMain.newTab().setText(R.string.tab_top_rating))
+        addPagerElement(RatingFragment.TAG)
+        binding.tabLayoutMain.addTab(binding.tabLayoutMain.newTab().setText(R.string.tab_friends_rating))
+        addPagerElement(FriendsRatingFragment.TAG)
+
         binding.tabLayoutMain.addTab(binding.tabLayoutMain.newTab().setText(R.string.tab_achievements))
         binding.tabLayoutMain.addTab(binding.tabLayoutMain.newTab().setText(R.string.tab_games_history))
-        binding.tabLayoutMain.addTab(binding.tabLayoutMain.newTab().setText(R.string.tab_top_rating))
-        binding.tabLayoutMain.addTab(binding.tabLayoutMain.newTab().setText(R.string.tab_friends_rating))
     }
 
     private fun addPagerElement(tag: String) {
