@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="hideMainInf"
+            type="Boolean" />
+
+        <variable
+            name="presenter"
+            type="com.example.photograd.android.auth.login.domain.RegistrationPresenter" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/login_side_padding"
+        tools:context=".auth.login.presentation.LoginFragment">
+
+        <EditText
+            android:id="@+id/et_login"
+            style="@style/LoginEditText"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/login_field_height"
+            android:layout_marginTop="10dp"
+            app:gone="@{hideMainInf}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_login"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:src="@drawable/ic_user"
+            app:gone="@{hideMainInf}"
+            app:layout_constraintBottom_toBottomOf="@+id/et_login"
+            app:layout_constraintDimensionRatio="V,1:1"
+            app:layout_constraintStart_toStartOf="@+id/et_login"
+            app:layout_constraintTop_toTopOf="@+id/et_login" />
+
+        <EditText
+            android:id="@+id/et_birth"
+            style="@style/LoginEditText"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/login_field_height"
+            android:layout_marginTop="10dp"
+            app:gone="@{!hideMainInf}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_calendar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:src="@drawable/ic_gender"
+            app:gone="@{!hideMainInf}"
+            app:layout_constraintBottom_toBottomOf="@+id/et_birth"
+            app:layout_constraintDimensionRatio="V,1:1"
+            app:layout_constraintStart_toStartOf="@+id/et_birth"
+            app:layout_constraintTop_toTopOf="@+id/et_birth" />
+
+        <EditText
+            android:id="@+id/et_password"
+            style="@style/LoginEditText"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/login_field_height"
+            android:layout_marginTop="10dp"
+            android:inputType="textPassword"
+            app:gone="@{hideMainInf}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_login" />
+
+        <ImageView
+            android:id="@+id/img_password"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:src="@drawable/ic_password"
+            app:gone="@{hideMainInf}"
+            app:layout_constraintBottom_toBottomOf="@+id/et_password"
+            app:layout_constraintDimensionRatio="V,1:1"
+            app:layout_constraintStart_toStartOf="@+id/et_password"
+            app:layout_constraintTop_toTopOf="@+id/et_password" />
+
+        <EditText
+            android:id="@+id/et_gender"
+            style="@style/LoginEditText"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/login_field_height"
+            android:layout_marginTop="10dp"
+            android:inputType="textPassword"
+            app:gone="@{!hideMainInf}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_birth" />
+
+        <ImageView
+            android:id="@+id/img_gender"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:src="@drawable/ic_password"
+            app:gone="@{!hideMainInf}"
+            app:layout_constraintBottom_toBottomOf="@+id/et_gender"
+            app:layout_constraintDimensionRatio="V,1:1"
+            app:layout_constraintStart_toStartOf="@+id/et_gender"
+            app:layout_constraintTop_toTopOf="@+id/et_gender" />
+
+        <Button
+            android:id="@+id/btn_to_continue"
+            style="@style/LightBtnStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/login_to_continue"
+            app:gone="@{hideMainInf}"
+            android:onClick="@{(v) -> presenter.continueClick()}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_phone" />
+
+        <Button
+            android:id="@+id/btn_sign_up"
+            style="@style/LightBtnStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            android:text="@string/login_sign_up"
+            android:onClick="@{(v) -> presenter.registrationClick()}"
+            app:gone="@{!hideMainInf}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_gender" />
+
+
+        <ImageView
+            android:id="@+id/view"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/dark_btn_bg"
+            android:padding="6dp"
+            android:src="@drawable/ic_phone"
+            app:gone="@{hideMainInf}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_password" />
+
+        <TextView
+            android:id="@+id/tv_prefix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="+7"
+            app:gone="@{hideMainInf}"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintStart_toEndOf="@+id/view"
+            app:layout_constraintTop_toTopOf="@+id/view" />
+
+        <EditText
+            android:id="@+id/et_phone"
+            style="@style/LoginEditText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:ems="10"
+            android:inputType="phone"
+            app:gone="@{hideMainInf}"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_prefix"
+            app:layout_constraintTop_toTopOf="@+id/view" />
+
+        <TextView
+            android:id="@+id/tv_swipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:text="@string/login_swipe_to_right"
+            app:gone="@{hideMainInf}"
+            app:layout_constraintEnd_toEndOf="@+id/btn_to_continue"
+            app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintStart_toStartOf="@+id/btn_to_continue"
+            app:layout_constraintTop_toBottomOf="@+id/btn_to_continue" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="13dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/ic_swipe_right"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_swipe"
+            app:layout_constraintStart_toEndOf="@+id/tv_swipe"
+            app:layout_constraintTop_toTopOf="@+id/tv_swipe" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

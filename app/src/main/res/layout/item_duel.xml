@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_dark_bg">
+
+        <ImageView
+            android:id="@+id/img_user"
+            android:layout_width="@dimen/duel_img_size"
+            android:layout_height="@dimen/duel_img_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:roundImg="@{``}"
+            tools:src="@tools:sample/avatars[3]" />
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="not_wokrey"
+            app:layout_constraintBottom_toTopOf="@+id/tv_rating"
+            app:layout_constraintStart_toEndOf="@id/img_user"
+            app:layout_constraintTop_toTopOf="@+id/img_user" />
+
+        <TextView
+            android:id="@+id/tv_rating"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="3455"
+            android:background="@drawable/duel_rating_tv_bg"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/img_user"
+            app:layout_constraintEnd_toEndOf="@+id/tv_nickname"
+            app:layout_constraintStart_toStartOf="@+id/tv_nickname"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nickname" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="V,1:1"
+            app:layout_constraintTop_toTopOf="@id/img_user"
+            app:layout_constraintBottom_toBottomOf="@id/img_user"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/ic_phone"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

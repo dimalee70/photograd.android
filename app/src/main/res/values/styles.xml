@@ -6,6 +6,66 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="editTextColor">@android:color/darker_gray</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+    
+    <style name="LoginEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/login_et_bg</item>
+        <item name="android:textSize">@dimen/login_field_text_size</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColorHint">@android:color/darker_gray</item>
     </style>
 
+    <style name="DarkBtnStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/dark_btn_state</item>
+        <item name="android:textColor">@color/color_btn_dark_text</item>
+    </style>
+
+    <style name="LightBtnStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/light_btn_state</item>
+        <item name="android:textColor">@color/color_btn_light_text</item>
+    </style>
+
+    <style name="LangBtnStyle" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:background">@drawable/language_radio_state</item>
+        <item name="android:textSize">@dimen/login_language_text_size</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@color/color_btn_dark_text</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="MissionItemStyle">
+        <item name="android:background">@drawable/item_mission_bg</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="ItemStyle">
+        <item name="android:layout_marginTop">@dimen/items_margin_top_bottom</item>
+        <item name="android:layout_marginBottom">@dimen/items_margin_top_bottom</item>
+        <item name="android:layout_marginStart">@dimen/items_margin_start_end</item>
+        <item name="android:layout_marginLeft">@dimen/items_margin_start_end</item>
+        <item name="android:layout_marginEnd">@dimen/items_margin_start_end</item>
+        <item name="android:layout_marginRight">@dimen/items_margin_start_end</item>
+        <item name="android:background">@drawable/item_bg</item>
+    </style>
+
+    <style name="CollapsedTitleStyle" parent="@android:style/TextAppearance">
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">@android:color/transparent</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ExpandedTitleStyle" parent="@android:style/TextAppearance">
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">@android:color/transparent</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

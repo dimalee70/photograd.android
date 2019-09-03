@@ -1,3 +1,598 @@
 <resources>
-    <string name="app_name">photograd.android</string>
+    <string name="app_name">Photograd</string>
+
+    <string name="photograd">PhotoGrad</string>
+
+    <!--Login-->
+    <string name="login_choose_lang">Выберите язык</string>
+
+    <string name="login_russian">Русский</string>
+    <string name="login_kazakh">Қазақша</string>
+    <string name="login_english">English</string>
+
+    <string name="login_to_continue">Продолжить</string>
+    <string name="login_forgot_password">Забыли пароль?</string>
+    <string name="login_registration">Регистрация</string>
+    <string name="login_login">Войти</string>
+    <string name="login_or">или</string>
+    <string name="login_agreement_begin">Авторизуясь, Вы соглашаетесь со следующими документами: </string>
+    <string name="login_user_agreement_begin">Пользовательское соглашение</string>
+    <string name="login_privacy_policy">Политика конфиденциальности.</string>
+    <string name="login_swipe_to_right">Смахните вправо для возвращение\nна страницу Входа</string>
+    <string name="login_sign_up">Зарегистрироваться</string>
+
+    <!--*Menu Games*-->
+    <!--Current games-->
+    <string name="current_games_opponent_turn">Ход соперника</string>
+    <string name="current_games_your_turn">Ваш ход</string>
+    <string name="current_games_mission">Миссия</string>
+    <string name="current_games_round">Раунд</string>
+    <string name="current_games_sponsored_by">sponsored by</string>
+
+    <!--Tab titles-->
+    <string name="tab_current_games">Текщие игры</string>
+    <string name="tab_missions">Миссии</string>
+    <string name="tab_duels">Дуэли</string>
+
+    <string name="tab_statistic">Статистика</string>
+    <string name="tab_achievements">Достижения</string>
+    <string name="tab_games_history">История игр</string>
+
+    <string name="tab_top_rating">ТОП Рейтинг</string>
+    <string name="tab_friends_rating">Рейтинг Друзей</string>
+
+    <string name="apples">Яблоки</string>
+    <string name="duels_tutorial">Дуэли</string>
+    <string name="missions_tutorial">Миссии</string>
+
+    <!--Game-->
+    <string name="game_round">Раунд</string>
+    <string name="game_your_turn">Ваш ход</string>
+    <string name="game_play">Играть</string>
+    <string name="game_photograd_mission_progress">Сыграно %1$s  Побед %2$s</string>
+
+    <!--Store-->
+    <string name="offer_flow_buy">Купить</string>
+    <string name="offer_rating_base_on">%1$s на основе %2$s отзывов</string>
+    <string name="offer_reviews_count">%1$s отзывов</string>
+    <string name="offer_reviews">Отзывы</string>
+
+    <string name="about_photograd">
+        Фото-викторина про город Алматы. Докажите всем, что именно Вы достойны звания"\"Настоящий Алматинец\"!
+    </string>
+    <string name="about_apples">
+       "Играйте и зарабатывайте яблоки. На них можно купить реальные товары или услуги от наших партнеров в разделе \"Магазин\".
+    </string>
+    <string name="about_duels">
+        Режим "Дуэль" предназначен для состязаний с друзьями и близкими. Выясните, кто знает город лучше!
+    </string>
+    <string name="about_missions">
+        Стандартные Миссии от Photograd позволяют зарабатывать яблоки в любое время
+    </string>
+
+
+    <string name="email">Электронная почта</string>
+    <string name="password">Пароль</string>
+    <string name="login">Войти</string>
+    <string name="register">Зарегистрироваться</string>
+    <string name="forgot_password">Забыли пароль?</string>
+    <string name="drop_password">Сбросить пароль?</string>
+    <string name="restore_password_instruction">На данный электронный адрес будет выслана ссылка, по которой Вы сможете сменить пароль</string>
+    <string name="authorization_warning">Авторизуясь, Вы соглашаетесь со следующими документами: </string>
+    <string name="activation_warning">Покупку необходимо своевременно использовать в течение времени, указанного ниже. Подробнее с правилами пользовательского поведения Вы можете ознакомиться в статье 6</string>
+    <string name="user_agreement">Пользовательское соглашение</string>
+    <string name="privacy_policy">Политика конфиденциальности</string>
+    <string name="user_name">Имя пользователя</string>
+
+    <string name="check_email_title">Пожалуйста, проверьте почту.</string>
+    <string name="check_email">Инструкция по сбросу пароля будет выслана в течении 5 минут.</string>
+
+    <string name="facebook_app_id">205368653432525</string>
+    <string name="fb_login_protocol_scheme">fb205368653432525</string>
+    <string name="login_types">Авторизуясь, Вы соглашаетесь со следующими документами: Пользовательское соглашение и политика конфеденциальности</string>
+
+    <!--Appbar(ProfileDataFragment)-->
+    <string name="games">Игры</string>
+    <string name="profile">Профиль</string>
+    <string name="ratings">Рейтинги</string>
+    <string name="settings">Настройки</string>
+    <string name="edit">Изменить</string>
+    <string name="store"> Магазин </string>
+    <string name="energy">Энергия</string>
+    <string name="duel">Дуэль</string>
+    <string name="mission">Миссия</string>
+    <string name="photograd_mission">Миссия Photograd</string>
+    <string name="partner_mission">Партнерская миссия</string>
+    <string name="before_refreshing">До восполнения +1</string>
+    <string name="energy_description">Энергия - возобновляемый ресурс, который используется для участия в играх. Разные типы игр потребляют разное количество энергии</string>
+    <string name="not_enough_energy">У Вас недостаточно энергии для игры!</string>
+
+    <string name="current_games">ТЕКУЩИЕ ИГРЫ</string>
+    <string name="missions">МИССИИ</string>
+    <string name="duels">ДУЭЛИ</string>
+    <string name="your_turn_vs">Ваш ход против</string>
+    <string name="opponent_turn">Идет ход соперника</string>
+    <string name="round">раунд %1$s</string>
+
+    <string name="default_network_error_message">Отсутствует соединение с интернетом.</string>
+    <string name="default_unexpected_error_message">Неизвестная ошибка на сервере.</string>
+    <string name="default_error_message">Ошибка соединения с сервером.</string>
+
+    <string name="timed_out">Время запроса истекло.</string>
+    <string name="network_connection_lost">Прервано соединение с интернетом.</string>
+    <string name="bad_server_response">Неверный ответ с сервера.</string>
+    <string name="server_error">Непредвиденная ошибка на сервере.</string>
+    <string name="try_again">Пожалуйста, попробуйте еще раз.</string>
+    <string name="bad_connection">Не получилось загрузить изображение. Проверьте интернет соеденение</string>
+    <string name="empty_fields">Обязательные поля не зполнены</string>
+    <string name="unknown_error">Произошла неизвестная ошибка.</string>
+    <string name="unknown_error_from_backend">Произошла ошибка на сервере. Пожалуйста, обновите приложение</string>
+
+    <string name="mission_description">Одержи %1$s побед в %2$s играх и получи гарантированный приз</string>
+    <string name="plus_apples">+ %1$s</string>
+    <string name="reward">НАГРАДА</string>
+    <string name="sponsored_by">sponsored by</string>
+
+    <string name="time_remain">%1$s д. %2$s:%3$s:%4$s</string>
+    <string name="short_time_remain">%1$s:%2$s</string>
+    <string name="short_date_remain">%1$s д. %2$s ч.</string>
+    <string name="time_hms_remain">%1$s:%2$s:%3$s</string>
+
+    <string name="player_not_defined">Игрок не определен</string>
+    <string name="player_not_defined_short">Не определен</string>
+
+    <!--Store-->
+    <string name="activate">Активировать</string>
+    <string name="field_for_activation_code">Поле для кода активации</string>
+    <string name="enter_activation_code">Введите код активации</string>
+    <string name="for_admin_of_partner">Поле для администратора</string>
+    <string name="activation_code_instruction">Введите 4-значный код активации. Код известен представителю «%1$s», пожалуйста, позвольте ему ввести код с Вашего устройства!</string>
+
+    <!--Game-->
+    <string name="hidden">СКРЫТО</string>
+    <string name="play">Играть</string>
+    <string name="continue_mission">Продолжить</string>
+    <string name="start_mission">Начать миссию</string>
+    <string name="sure_surrender">Вы действительно хотите сдаться в этой игре?</string>
+    <string name="yes">Да</string>
+    <string name="ok">OK</string>
+    <string name="no">Нет</string>
+    <string name="revenge">Предложить реванш</string>
+    <string name="with_score">СО СЧЁТОМ</string>
+    <string name="random_opponent_duels">Случайный\nсоперник</string>
+
+    <!--Missions-->
+    <string name="mission_start_game">Начать игру</string>
+
+    <string name="top_50">ТОП-50</string>
+    <string name="friends">Рейтинг друзей</string>
+
+    <!--Profile-->
+    <string name="games_stats">Статистика игр</string>
+    <string name="sound">Выключить\nзвук</string>
+    <string name="dynamic_background">Динамичный\nфон</string>
+    <string name="change_theme">Сменить\nтему</string>
+    <string name="user_information">Пользовательские данные</string>
+    <string name="add_question">Добавить\nвопрос</string>
+    <string name="birth_date">Дата рождения</string>
+    <string name="sex">Пол</string>
+    <string name="not_confirmed">(не подтверждена)</string>
+    <string name="send">Отправить</string>
+    <string name="male">Мужской</string>
+    <string name="female">Женский</string>
+    <string name="not_given">Не задан</string>
+    <string name="day">День</string>
+    <string name="month">Месяц</string>
+    <string name="year">Год</string>
+    <string name="change">Изменить</string>
+    <string name="save">Сохранить</string>
+    <string name="link_change_password">ссылку с изменением пароля</string>
+    <string name="our_instagram">наш Инстаграм</string>
+    <string name="for_feedback">Для обратной связи:</string>
+    <string name="send_message_title">Написать компании Photograd</string>
+    <string name="write_to_email_suggestion">Также Вы можете написать нам на почту:</string>
+    <string name="photograd_email">help@photograd.kz</string>
+    <string name="exit">Выход</string>
+    <string name="true_almatian">Настоящий Алматинец</string>
+    <string name="average_right_answers_count">Среднее количество\nправильных ответов</string>
+    <string name="played_games">Сыграно игр</string>
+    <string name="right_answers_by_category">Правильные ответы по категориям</string>
+    <string name="draws">Ничьи</string>
+    <string name="losses">Поражения</string>
+    <string name="january">Январь</string>
+    <string name="february">Февраль</string>
+    <string name="march">Март</string>
+    <string name="april">Апрель</string>
+    <string name="may">Май</string>
+    <string name="june">Июнь</string>
+    <string name="jule">Июль</string>
+    <string name="august">Август</string>
+    <string name="september">Сентябрь</string>
+    <string name="october">Октябрь</string>
+    <string name="november">Ноябрь</string>
+    <string name="december">Декабрь</string>
+
+    <string name="try_later">Пожалуйста, попробуйте позже.</string>
+    <string name="choose_category">Выберите категорию вопросов</string>
+
+    <string name="not_answered">Нет ответа</string>
+    <string name="againist_category">Против Вас выбрали категорию вопросов</string>
+
+    <string name="search_hint">Найти по имени игрока</string>
+    <string name="random_opponent">Случайный соперник</string>
+    <string name="invite_friend">Пригласить друга</string>
+    <string name="top">ТОП - %1$s</string>
+    <string name="partner_game">игры</string>
+    <string name="left_games">Осталось игр: %1$s из %2$s</string>
+    <string name="time_remain_partner_game">30:00</string>
+    <string name="time_remain_mission_game">2:00:00</string>
+    <string name="time_remain_duel_game">4:00:00</string>
+    <string name="number">#%1$s</string>
+    <string name="empty">-</string>
+
+    <string name="find_by_name">Найти по имени игрока</string>
+    <string name="invite_title">Пригласить в Photograd</string>
+    <string name="invite">Давай сыграем в Photograd! Скачай бесплатную игру:\nДля iPhone - %1$s\nДля Android - %2$s\nи брось мне вызов! Мое имя в игре %3$s!\n</string>
+    <string name="ios_url">https://apple.co/2Cnd9hw</string>
+    <string name="android_url">http://bit.ly/2TdduJm</string>
+
+    <string name="wins">Победы</string>
+    <string name="required">Необходимо</string>
+    <string name="reward_label">Награда</string>
+    <string name="private_score">личный счет</string>
+    <string name="challenge_friend">Бросить вызов друзьям</string>
+    <string name="add_to_friends">Добавить в друзья</string>
+    <string name="search_results">Результаты поиска</string>
+    <string name="no_friends">Вы еще не добавили друзей.</string>
+
+    <string name="won">ПОБЕДА!</string>
+    <string name="draw">НИЧЬЯ!</string>
+    <string name="lost">ПОРАЖЕНИЕ!</string>
+
+    <string name="won_to">Вы выиграли у</string>
+    <string name="draw_to">Вы сыграли вничью с</string>
+    <string name="lost_to">Вы проиграли</string>
+
+    <string name="remains_to_win_more">Осталось выиграть еще</string>
+    <string name="current_won_count">Текущее количество побед</string>
+    <string name="find_opponent">Найти соперника</string>
+    <string name="rating_upper">РЕЙТИНГ</string>
+    <string name="score">СЧЕТ</string>
+
+    <string name="accept">Принять</string>
+    <string name="decline">Отклонить</string>
+    <string name="challenged">Вам брошен вызов!</string>
+    <string name="challenge_you">бросил Вам вызов</string>
+
+    <string name="games_need">Игр</string>
+    <string name="victories_need">Побед</string>
+
+    <string name="purchase">Покупки</string>
+    <string name="frinedship_request">Запрос на дружбу</string>
+    <string name="frienship_offering">предлагает Вам дружбу</string>
+    <string name="challenge_declined">Вызов отклонен!</string>
+    <string name="decline_challenge">отклонил Ваш вызов</string>
+    <string name="sure_surrender_mission">Вы действительно хотите сдаться в этой миссии?</string>
+    <string name="loose_progress">Если вы нажмете да, то потеряете весь прогресс в данной миссии</string>
+    <string name="sure_challenge">Вызвать на дуэль игрока?</string>
+    <string name="mission_completed">МИССИЯ ПРОЙДЕНА!</string>
+    <string name="you_finish_mission">Вы прошли миссию</string>
+    <string name="your_reward">Ваша награда</string>
+    <string name="your_reward_review">Ваша награда:</string>
+    <string name="mission_failed_text">К сожалению, Вы не прошли миссию</string>
+    <string name="mission_failed">МИССИЯ ПРОВАЛЕНА!</string>
+    <string name="start_new">Начать новую</string>
+    <string name="your_place">Вы заняли место</string>
+    <string name="mission_finished">МИССИЯ ЗАВЕРШЕНА!</string>
+    <string name="you_not_win">Вы не выиграли в миссии</string>
+    <string name="time_to_activation">Время на активацию</string>
+    <string name="congratulate">ПОЗДРАВЛЯЕМ!</string>
+    <string name="achievement_name">"%1$s"</string>
+    <string name="prize">ПОЛУЧЕН ТРОФЕЙ!</string>
+    <string name="title_received">ПОЛУЧЕН ТИТУЛ!</string>
+    <string name="finish">Завершить</string>
+    <string name="cancel">Отмена</string>
+    <string name="choose">Выбрать</string>
+    <string name="random_category">Случайная категория</string>
+    <string name="photo_by">photo by</string>
+
+    <string name="welcome">Добро пожаловать\nв Photograd!</string>
+    <string name="check_mail_for_confirmation">На Вашу электронную почту было выслано письмо с ссылкой для подтверждения
+        Вашей Учётной записи (проверьте папку "Спам"). Это необходимо для использования всех возможностей Photograd, таких как:</string>
+    <string name="confirmation_advantages">- Использовать Внутриигровую валюту\n- Участвовать в спонсорских миссиях\n- Отображение в общем рейтинге
+    </string>
+    <string name="link_for_confirmation">ссылку с подтверждением аккаунта</string>
+    <string name="resend">Переотправить</string>
+
+    <string name="resend_alert_title">Пожалуйста, проверьте почту.</string>
+    <string name="resend_alert_messege">Cсылка для подтверждения учетной записи будет выслана в течение 5 минут.</string>
+    <string name="note">Примечения</string>
+    <string name="to_cancel">Отменить</string>
+    <string name="wins_label">победы</string>
+    <string name="challenges">Вызовы</string>
+    <string name="challenged_user">Вызов брошен игроку</string>
+    <string name="purchase_code">Код покупки: </string>
+    <string name="at_stake">На кону 1</string>
+    <string name="personal_score">Личный счёт </string>
+    <string name="personal_score_caps">ЛИЧНЫЙ СЧЁТ</string>
+    <string name="guaranteed_prize">гарантированный приз %1$s</string>
+    <string name="three_wins_from_total_games">3 победы в 5 играх</string>
+    <string name="wins_from_total_games">%1$d побед в %2$d играх</string>
+
+    <!--Submit Question-->
+    <string name="add_question_submit">Добавить вопрос</string>
+    <string name="photo_requirements"> Не допускаются фотографии:\n
+        1) скаченные с интернета или иные не принадлежащие Вам фото\n
+        2) очевидного рекламного характера либо с присутствием логотипа или имиджа компании, с рекламными баннерами на самом фото\n
+        3) с отчетливым видом номеров автомобилей\n
+        4) с аморальным или иным контентом запрещённым законодательством РК\n
+        5) дублирующий уже существующий вопрос в игре. </string>
+    <string name="about_reward">В зависимости от качества и полноценности, за каждый добавленный вопрос Вы можете получить от 1 до 5 яблок.</string>
+    <string name="load_photo">Загрузить фото</string>
+    <string name="enter_question">Введите текст вопроса</string>
+    <string name="enter_right_variant">Введите правильный вариант ответа</string>
+    <string name="enter_wrong_variant">Введите неправильный вариант ответа</string>
+    <string name="description_to_photo">Пояснение к фото (местоположение, описание объектов при необходимости)</string>
+    <string name="wrong_alert_title">Незаполненные поля</string>
+    <string name="wrong_alert_message">Все поля должны быть заполнены. Попробуйте ещё раз.</string>
+    <string name="no_image_alert_title">Нет изображения</string>
+    <string name="no_image_alert_message">Пожалуйста, выберите изображение для отправки вопроса</string>
+    <string name="question_in_moderation_alert_title">Спасибо, Ваш вопрос №%1$d отправлен на рассмотрение</string>
+    <string name="question_declined">Ваш вопрос №%1$d отклонён</string>
+    <string name="question_accepted">Ваш вопрос №%1$d уже в игре!</string>
+    <string name="question">Вопрос</string>
+    <string name="reason">Причина отклонения</string>
+    <string name="comment">Комментарий</string>
+    <string name="question_in_moderation_alert_message">Пожалуйста, ожидайте уведомления с ответом</string>
+    <string name="unfortunately">К сожалению</string>
+    <string name="deposit">Депозит</string>
+    <string name="restrictions">Ограничения</string>
+    <string name="purchase_count_left">Осталось покупок - %1$d</string>
+    <string name="available_in_next">Доступно в %1$s %2$d %3$s - %4$d</string>
+    <plurals name="next">
+        <item quantity="one">ближайший</item>
+        <item quantity="other">ближайшие</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="zero">дней</item>
+        <item quantity="one">день</item>
+        <item quantity="few">дня</item>
+        <item quantity="many">дней</item>
+        <item quantity="other">дней</item>
+    </plurals>
+    <string name="till_next_purchase">До следующей покупки -</string>
+    <string name="limit_is_reached">Вы исчерпали лимит покупок</string>
+
+    <!--Errors-->
+
+    <!--titles-->
+    <string name="title_user_not_exist">Не удалось найти аккаунт</string>
+    <string name="title_incorrect_password_or_email">Не удалось войти</string>
+    <string name="title_session_not_exist">Ваша сессия истекла.</string>
+    <string name="title_active_mission_exists">Нельзя начать миссию</string>
+    <string name="title_mission_not_exist">Ошибка</string>
+    <string name="title_no_active_mission_attempt">Ошибка</string>
+    <string name="title_game_not_exist">Ошибка</string>
+    <string name="title_user_not_challenged">Ошибка</string>
+    <string name="title_not_challenging_game">Ошибка</string>
+    <string name="title_gameround_not_exist">Этого раунда не существует</string>
+    <string name="title_category_not_exist">Данной категории не существует</string>
+    <string name="title_user_not_starting_round">Не получилось совершить действие</string>
+    <string name="title_gameround_already_finished">Не удалось ответить</string>
+    <string name="title_question_instance_not_exist">Не удалось ответить</string>
+    <string name="title_answer_option_not_exist">Не удалось ответить</string>
+    <string name="title_category_already_selected">Не удалось выбрать категорию</string>
+    <string name="title_user_already_in_friendlist">Запрос не отправлен</string>
+    <string name="title_mission_attempt_not_active">Ошибка</string>
+    <string name="title_mission_attempt_games_amount_exceeded">Превышено максимальное количество активных игр в миссии</string>
+    <string name="title_offer_not_exist">Не удалось найти данное предложение</string>
+    <string name="title_not_enough_apples">Данная опция пока недоступна</string>
+    <string name="title_user_not_playing_game">Действие недоступно</string>
+    <string name="title_game_already_finished">Не удалось сдаться</string>
+    <string name="title_user_already_exists">Ошибка регистрации</string>
+    <string name="title_friendship_request_already_sent">Немножко терпения</string>
+    <string name="title_no_such_friendship_request">Ошибка</string>
+    <string name="title_accepting_not_friendship_request">Ошибка</string>
+    <string name="title_declining_not_friendship_request">Ошибка</string>
+    <string name="title_image_file_error">Не удалось обработать изображение</string>
+    <string name="title_user_not_logged_in">У вас нет активной сессии</string>
+    <string name="title_partner_mission_not_exist">Ошибка</string>
+    <string name="title_partner_mission_is_not_active">Не удалось начать игру</string>
+    <string name="title_already_playing_partner_mission">Не удалось начать игру</string>
+    <string name="title_purchase_not_exist">Не удалось найти покупку</string>
+    <string name="title_not_user_purchase">Ошибка активации</string>
+    <string name="title_empty_username">Не задано имя пользователя</string>
+    <string name="title_incorrect_social_network">Недопустимый метод входа</string>
+    <string name="title_empty_email">Не задан email</string>
+    <string name="title_invalid_email">Некорректный email</string>
+    <string name="title_should_be_another_user">Ошибка</string>
+    <string name="title_not_valid_game_type">Несуществующий тип игры</string>
+    <string name="title_username_max_length_exceeded">Слишком длинное имя пользователя</string>
+    <string name="title_purchase_expired">Ошибка активации</string>
+    <string name="title_purchase_already_activated">Ошибка активации</string>
+    <string name="title_mission_reward_expired">Ошибка активации</string>
+    <string name="title_mission_reward_already_activated">Ошибка активации</string>
+    <string name="title_user_not_confirmed">Данная опция недоступна</string>
+    <string name="title_opponent_not_enough_apples">Не удалось начать игру</string>
+    <string name="title_incompatible_api_version">Ваша версия приложения устарела</string>
+    <string name="title_user_is_blocked">Ваш аккаунт заблокирован</string>
+    <string name="title_email_already_registered">Не получилось обновить данные</string>
+    <string name="title_question_text_too_short">Слишком короткий текст вопроса</string>
+    <string name="title_wrong_number_of_answers">Вы не указали все варианты ответов</string>
+    <string name="title_invalid_gender">Ошибка обновления данных</string>
+    <string name="title_wrong_date_format">Ошибка обновления данных</string>
+    <string name="title_need_to_play_mission">Данная опция недоступна</string>
+    <string name="title_opponent_can_not_play">Не удалось начать игру</string>
+    <string name="title_no_offers_left">Предложение недоступно</string>
+    <string name="title_personal_info_not_set">Данная опция недоступна</string>
+    <string name="title_offer_user_purchases_out_of_limit">Предложение недоступно</string>
+    <string name="title_offer_user_purchases_out_of_period_limit">Предложение будет доступно позже</string>
+    <string name="title_no_email_in_profile">Не удалось войти</string>
+    <string name="title_mission_reward_not_exist">Ошибка</string>
+    <string name="title_not_user_reward">Не получилось совершить действие</string>
+    <string name="title_wrong_activation_key">Неверный код</string>
+    <string name="title_partner_mission_not_available_at_night_time">Ночное время</string>
+    <string name="title_not_enough_energy">Недостаточно энергии</string>
+    <string name="title_opponent_not_enough_energy">Пожалуйста, попробуйте позже</string>
+    <string name="title_partner_mission_games_limit_exceeded">Ожидайте результатов</string>
+
+    <!--Messages-->
+    <string name="message_user_not_exist">Данного пользователя не существует</string>
+    <string name="message_incorrect_password_or_email">Неверный email или пароль</string>
+    <string name="message_session_not_exist">Попробуйте войти заново</string>
+    <string name="message_active_mission_exists">У Вас уже есть активная миссия</string>
+    <string name="message_mission_not_exist">Такой миссии не существует.</string>
+    <string name="message_no_active_mission_attempt">У Вас нет активной миссии</string>
+    <string name="message_game_not_exist">Не удалось найти данную игру</string>
+    <string name="message_user_not_challenged">Этот вызов не для Вас</string>
+    <string name="message_not_challenging_game">Данный вызов истек</string>
+    <string name="message_gameround_not_exist">Попробуйте еще раз</string>
+    <string name="message_category_not_exist">Попробуйте еще раз</string>
+    <string name="message_user_not_starting_round">Не ваша очередь</string>
+    <string name="message_gameround_already_finished">Раунд уже завершен.</string>
+    <string name="message_question_instance_not_exist">Одного из вопросов не существует</string>
+    <string name="message_answer_option_not_exist">Одного из вариантов ответа не существует</string>
+    <string name="message_category_already_selected">Категория уже задана</string>
+    <string name="message_user_already_in_friendlist">Вы уже друзья</string>
+    <string name="message_mission_attempt_not_active">Попытка пройти миссию неактивна.</string>
+    <string name="message_mission_attempt_games_amount_exceeded">Необходимо завершить текущие игры</string>
+    <string name="message_offer_not_exist">Попробуйте обновить список предложений</string>
+    <string name="message_not_enough_apples">У Вас недостаточно яблок</string>
+    <string name="message_user_not_playing_game">Вы не участвуете в этой игре</string>
+    <string name="message_game_already_finished">Игра уже завершена</string>
+    <string name="message_user_already_exists">Такой email уже зарегистрирован</string>
+    <string name="message_friendship_request_already_sent">Вы уже отправляли запрос на добавление в друзья</string>
+    <string name="message_no_such_friendship_request">Не удалось найти этот запрос на добавление в друзья</string>
+    <string name="message_accepting_not_friendship_request">Вы уже ответили на данный запрос о дружбе</string>
+    <string name="message_declining_not_friendship_request">Вы уже ответили на данный запрос о дружбе</string>
+    <string name="message_image_file_error">Попробуйте загрузить его еще раз</string>
+    <string name="message_user_not_logged_in">Для продолжения работы необходимо войти в систему</string>
+    <string name="message_partner_mission_not_exist">Такой партнерской миссии не существует.</string>
+    <string name="message_partner_mission_is_not_active">Эта миссия неактивна</string>
+    <string name="message_already_playing_partner_mission">Превышено максимальное количество активных игр в этой миссии</string>
+    <string name="message_purchase_not_exist">Вы можете связаться с нами на странице настроек</string>
+    <string name="message_not_user_purchase">Покупка принадлежит другому пользователю</string>
+    <string name="message_empty_username">Поле "имя пользователя" обязательно для заполнения</string>
+    <string name="message_incorrect_social_network">Попробуйте войти через логин/пароль</string>
+    <string name="message_empty_email">Поле "email" обязательно для заполнения</string>
+    <string name="message_invalid_email">Возможно, вы неправильно его ввели</string>
+    <string name="message_should_be_another_user">Выберите другого пользователя</string>
+    <string name="message_not_valid_game_type">Пожалуйста, отправьте скрин ошибки на help@photograd.kz</string>
+    <string name="message_username_max_length_exceeded">Максимальная длина - 14 символов</string>
+    <string name="message_purchase_expired">Срок действия покупки истек</string>
+    <string name="message_purchase_already_activated">Покупка уже активирована</string>
+    <string name="message_mission_reward_expired">Срок действия награды истек</string>
+    <string name="message_mission_reward_already_activated">Награда уже активирована</string>
+    <string name="message_user_not_confirmed">Необходимо подтвердить электронную почту</string>
+    <string name="message_opponent_not_enough_apples">У Вашего соперника недостаточно яблок</string>
+    <string name="message_incompatible_api_version">Необходимо обновить приложение</string>
+    <string name="message_user_is_blocked">Обратитесь в администрацию Photograd</string>
+    <string name="message_email_already_registered">Такой email уже зарегистрирован</string>
+    <string name="message_question_text_too_short">Минимальная длина - 15 символов</string>
+    <string name="message_wrong_number_of_answers">Необходимо заполнить все 4 варианта ответов</string>
+    <string name="message_invalid_gender">Указан некорректный пол</string>
+    <string name="message_wrong_date_format">Неверная дата рождения</string>
+    <string name="message_need_to_play_mission">Необходимо выиграть миссию</string>
+    <string name="message_opponent_can_not_play">Вашему сопернику недоступны дуэли</string>
+    <string name="message_no_offers_left">Превышено допустимое количество</string>
+    <string name="message_personal_info_not_set">Необходимо указать в настройках пол и дату рождения</string>
+    <string name="message_offer_user_purchases_out_of_limit">Вы исчерпали свой лимит покупок по данному предложению</string>
+    <string name="message_offer_user_purchases_out_of_period_limit">Время ожидания отображено на всплывающем окне предложения</string>
+    <string name="message_no_email_in_profile">В Вашем facebook аккаунте не задан email</string>
+    <string name="message_mission_reward_not_exist">Такой награды не существует</string>
+    <string name="message_not_user_reward">Эта награда Вам не принадлежит</string>
+    <string name="message_wrong_activation_key">Введён неверный код активации. Попробуйте ещё раз.</string>
+    <string name="message_partner_mission_not_available_at_night_time">Миссия будет доступна в 9:00</string>
+    <string name="message_not_enough_energy">Пожалуйста, попробуйте позже</string>
+    <string name="message_opponent_not_enough_energy">У Вашего друга недостаточно энергии</string>
+    <string name="message_partner_mission_games_limit_exceeded">Вы сыграли максимальное количество игр в данной миссии</string>
+
+    <!--Guide-->
+    <string name="head_txt_start_mission">Начать миссию</string>
+    <string name="sub_txt_start_mission">Нажмите, чтобы начать миссию</string>
+
+    <string name="head_txt_open_mission">Миссии</string>
+    <string name="sub_txt_open_mission">Стандартные Миссии от Photograd позволяют зарабатывать яблоки в любое время</string>
+
+    <string name="head_txt_games_menu">Игры</string>
+    <string name="sub_txt_games_menu">В разделе "Игры" можно проходить стандартные и спонсорские Миссии, а также играть Дуэли против друзей</string>
+
+    <string name="head_txt_play_game">Начать игру</string>
+    <string name="sub_txt_play_game">Нажмите «Играть», чтобы начать Вашу первую игру</string>
+
+    <string name="head_txt_wait_your_turn">Ход соперника</string>
+    <string name="sub_txt_wait_your_turn">Ваш соперник еще не ответил на вопросы. Вам необходимо дождаться свой очереди</string>
+
+    <string name="head_txt_second_round">Второй раунд</string>
+    <string name="sub_txt_second_round">Вам необходимо сыграть 2 раунд</string>
+
+    <string name="head_txt_back_button">Назад</string>
+    <string name="sub_txt_back_button">Теперь ожидайте ход соперника</string>
+
+    <string name="head_txt_start_duel">Пригласить друга</string>
+    <string name="sub_txt_start_duel">Начни играть с друзьями. Отправь им приглашение и выясни, кто знает этот город лучше!</string>
+
+    <string name="head_txt_store_menu">Магазин</string>
+    <string name="sub_txt_store_menu">В Магазине вы можете тратить накопленные яблоки на реальные товары и услуги от наших партнёров</string>
+
+    <string name="head_txt_profile_menu">Профиль</string>
+    <string name="sub_txt_profile_menu">Здесь Вы можете смотреть свою игровую Статистику, редактировать пользовательские данные, менять Настройки игры и даже добавлять вопросы</string>
+
+    <string name="head_txt_open_purchase_dialog">Предложение</string>
+    <string name="sub_txt_open_purchase_dialog">Наши партнёры рады наградить настоящих алматинцев. Яблоки помогут Вам приобрести эти награды</string>
+
+    <string name="head_txt_purchase">Покупка</string>
+    <string name="sub_txt_purchase">Совершите свою первую Покупку в Photograd, нажав на кнопку «Купить»</string>
+
+    <string name="head_txt_instruction">Активация</string>
+    <string name="sub_txt_instruction">Активировать Покупку необходимо в течении нижеуказанного времени</string>
+
+    <string name="head_txt_open_activation_dialog">Поздравляем!</string>
+    <string name="sub_txt_open_activation_dialog">Вы совершили Покупку! Нажмите на неё, чтобы ознакомиться с процедурой Активации</string>
+
+    <string name="head_txt_add_question">Добавить вопрос</string>
+    <string name="sub_txt_add_question">В Photograd у вас есть возможность самому добавлять вопросы в игру и получать за это яблоки</string>
+
+    <string name="head_txt_edit_btn">Пользовательские данные</string>
+    <string name="sub_txt_edit_btn">Нажмите «Изменить», чтобы начать редактирирование</string>
+
+    <string name="head_txt_date_picker">Дата рождения</string>
+    <string name="sub_txt_date_picker">Необходимо указать настоящую Дату рождения</string>
+
+    <string name="head_txt_gender">Пол</string>
+    <string name="sub_txt_gender">Укажите пол</string>
+
+    <string name="head_txt_save_btn">Сохранить</string>
+    <string name="sub_txt_save_btn">Нажмите, чтобы сохранить изменения</string>
+
+    <string name="head_txt_confirm_email">Email не подтверждён </string>
+    <string name="sub_txt_confirm_email">Обратите внимание, вам необходимо подтвердить email пройдя по ссылке, которую мы отправили вам на почту</string>
+
+    <string name="head_txt_load_img">Загрузить фото</string>
+    <string name="sub_txt_load_img">Загрузите фото вопроса</string>
+
+    <string name="head_txt_photo_description">Описание</string>
+    <string name="sub_txt_photo_description">Опишите, где было сделано фото, важные оссобенности и детали, чтобы мы могли проверить фото на достоверность</string>
+
+    <string name="head_txt_question_field">Текст вопроса</string>
+    <string name="sub_txt_question_field">Запишите сформулированный Вами текст вопроса</string>
+
+    <string name="head_txt_right_variant">Правильный ответ</string>
+    <string name="sub_txt_right_variant">Введите правильный вариант ответа</string>
+
+    <string name="head_txt_wrong_variant">Неверный ответ</string>
+    <string name="sub_txt_wrong_variant">В полях, помеченных красным цветом, введите неправильные варианты ответов.</string>
+
+    <string name="head_txt_read_requirements">Требования</string>
+    <string name="sub_txt_read_requirements">Внимательно прочитайте и ознкомьтесь с требованиями к фотографиям</string>
+
+    <string name="almatian_map_achievement">Карта Алматинца</string>
+    <string name="to_left_symbol"><![CDATA[<]]></string>
+    <string name="to_right_symbol"><![CDATA[>]]></string>
+    <string name="swipe_to_left">Смахните влево</string>
+    <string name="swipe">Смахните</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

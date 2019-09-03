@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#1AC9EF</color>
+    <color name="colorPrimaryDark">#18223A</color>
+    <color name="colorAccent">#0f182d</color>
+
+    <color name="color_white">#f0f0f0</color>
+    <!--dark button-->
+    <color name="color_btn_dark_gradient_start">#2c395a</color>
+    <color name="color_btn_dark_gradient_end">#161e33</color>
+    <color name="color_btn_dark_stroke">#222d47</color>
+    <color name="color_btn_dark_pressed_bg">#0f182d</color>
+    <color name="color_btn_dark_text">#1AC9EF</color>
+
+    <!--light button-->
+    <color name="color_btn_light_gradient_start">#76cee2</color>
+    <color name="color_btn_light_gradient_end">#10849e</color>
+    <color name="color_btn_light_stroke">#222d47</color>
+    <color name="color_btn_light_pressed_bg">#10849e</color>
+    <color name="color_btn_light_text">#18223A</color>
+
+    <color name="color_current_game_bg">#18223A</color>
+    <color name="color_tab_bg">#112944</color>
+
+    <color name="color_round_game">#AA222D47</color>
+    <color name="color_right_answer">#79E126</color>
+
+    <color name="color_offer_bg">#18223A</color>
+    <color name="color_dark_bg">#0f182d</color>
+    <color name="color_mission_item_bg">#0f182d</color>
+
 </resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/login_side_padding"
+        tools:context=".auth.LanguageFragment">
+
+        <RadioGroup
+            android:id="@+id/rg_languages"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                style="@style/LangBtnStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/login_field_height"
+                android:text="@string/login_russian" />
+
+            <RadioButton
+                style="@style/LangBtnStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/login_field_height"
+                android:text="@string/login_kazakh" />
+
+            <RadioButton
+                style="@style/LangBtnStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/login_field_height"
+                android:text="@string/login_english" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_continue"
+            style="@style/LightBtnStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/login_button_height"
+            android:layout_marginTop="15dp"
+            android:text="@string/login_to_continue"
+            app:layout_constraintEnd_toEndOf="@id/rg_languages"
+            app:layout_constraintStart_toStartOf="@id/rg_languages"
+            app:layout_constraintTop_toBottomOf="@id/rg_languages" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

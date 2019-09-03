@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/authFlowFragment">
+    <fragment
+        android:id="@+id/authFlowFragment"
+        android:name="com.example.photograd.android.auth.AuthFlowFragment"
+        android:label="fragment_auth_flow"
+        tools:layout="@layout/fragment_auth_flow" >
+        <action
+            android:id="@+id/action_authFlowFragment_to_languageFragment"
+            app:destination="@id/languageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/languageFragment"
+        android:name="com.example.photograd.android.auth.LanguageFragment"
+        android:label="fragment_language">
+        <action
+            android:id="@+id/action_languageFragment_to_authFragment"
+            app:destination="@id/authFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.example.photograd.android.auth.login.presentation.AuthFragment"
+        android:label="AuthFragment" >
+        <action
+            android:id="@+id/action_authFragment_to_homeFlowFragment"
+            app:destination="@id/homeFlowFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFlowFragment"
+        android:name="com.example.photograd.android.home.presentation.HomeFlowFragment"
+        android:label="fragment_home_flow"
+        tools:layout="@layout/fragment_home_flow" >
+        <action
+            android:id="@+id/action_homeFlowFragment_to_gameFragment"
+            app:destination="@id/gameFlowFragment" />
+        <action
+            android:id="@+id/action_homeFlowFragment_to_offersFlow"
+            app:destination="@id/offersFlow" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFlowFragment"
+        android:name="com.example.photograd.android.home.games.gameflow.GameFLowFragment"
+        android:label="GameFragment" />
+    <fragment
+        android:id="@+id/offersFlow"
+        android:name="com.example.photograd.android.home.store.details.presentation.OffersFlowFragment"
+        android:label="fragment_offers_flow"
+        tools:layout="@layout/fragment_offers_flow" >
+        <argument
+            android:name="titles"
+            app:argType="string[]" />
+    </fragment>
+</navigation>
