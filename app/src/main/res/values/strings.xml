@@ -40,6 +40,8 @@
 
     <string name="tab_top_rating">ТОП Рейтинг</string>
     <string name="tab_friends_rating">Рейтинг Друзей</string>
+    <string name="tab_base_settings">Основные</string>
+    <string name="tab_profile">Профиль</string>
 
     <string name="apples">Яблоки</string>
     <string name="duels_tutorial">Дуэли</string>
@@ -56,6 +58,33 @@
     <string name="offer_rating_base_on">%1$s на основе %2$s отзывов</string>
     <string name="offer_reviews_count">%1$s отзывов</string>
     <string name="offer_reviews">Отзывы</string>
+
+    <!--Base settings-->
+    <string name="base_settings_our_contacts">Наши контакты</string>
+    <string name="base_settings_chat">Настройки чата</string>
+    <string name="base_settings_content">Настройки контента</string>
+    <string name="base_settings_app">Настройки приложения</string>
+    <string name="base_settings_language">Язык</string>
+    <string name="base_settings_city">Город</string>
+    <string name="base_settings_background">Фон</string>
+    <string name="base_settings_sound">Звук</string>
+    <string name="base_settings_chat_mode">Режим чата</string>
+    <string name="base_settings_limited">Ограниченный</string>
+    <string name="base_settings_russian">Русский</string>
+    <string name="base_settings_almaty">Алматы</string>
+    <string name="base_settings_dynamic">Динамичный</string>
+    <string name="base_settings_static">Статичный</string>
+    <string name="base_settings_off">Выкл.</string>
+    <string name="base_settings_on">Вкл.</string>
+
+    <!--Profile-->
+    <string name="profile_user_id">ID игрока</string>
+    <string name="profile_phone_number">Номер телефона</string>
+    <string name="profile_birthday">Дата рождения</string>
+    <string name="profile_gender">Пол</string>
+    <string name="profile_username">Имя пользователя</string>
+    <string name="profile_not_given">Не задан</string>
+
 
     <string name="about_photograd">
         Фото-викторина про город Алматы. Докажите всем, что именно Вы достойны звания"\"Настоящий Алматинец\"!
@@ -594,5 +623,22 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="chat_mode">
+        <item>Ограниченный</item>
+        <item>Неограниченный</item>
+    </string-array>
+
+    <string-array name="language_mode">
+        <item>Русский</item>
+        <item>English</item>
+        <item>Қазақша</item>
+    </string-array>
+
+    <string-array name="city_mode">
+        <item>Алматы</item>
+        <item>Астана</item>
+        <item>Жезкент</item>
+    </string-array>
 
 </resources>

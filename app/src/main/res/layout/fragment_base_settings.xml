@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_contacts"
+            style="@style/BaseSettingsStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_contacts"
+                style="@style/BaseSettingsTitleStyles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/base_settings_our_contacts"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/img_message"
+                style="@style/DarkBtnStyle"
+                android:layout_width="@dimen/base_settings_img_contact"
+                android:layout_height="@dimen/base_settings_img_contact"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_web"
+                app:layout_constraintStart_toStartOf="@id/tv_contacts"
+                app:layout_constraintTop_toBottomOf="@id/tv_contacts" />
+
+            <ImageButton
+                android:id="@+id/img_web"
+                style="@style/DarkBtnStyle"
+                android:layout_width="@dimen/base_settings_img_contact"
+                android:layout_height="@dimen/base_settings_img_contact"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_web"
+                app:layout_constraintBottom_toBottomOf="@id/img_message"
+                app:layout_constraintStart_toEndOf="@id/img_message"
+                app:layout_constraintTop_toTopOf="@id/img_message" />
+
+            <ImageButton
+                android:id="@+id/img_instagram"
+                style="@style/DarkBtnStyle"
+                android:layout_width="@dimen/base_settings_img_contact"
+                android:layout_height="@dimen/base_settings_img_contact"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_instagram"
+                app:layout_constraintBottom_toBottomOf="@id/img_web"
+                app:layout_constraintStart_toEndOf="@id/img_web"
+                app:layout_constraintTop_toTopOf="@id/img_web" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_chat"
+            style="@style/BaseSettingsStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_chat"
+                style="@style/BaseSettingsTitleStyles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/base_settings_chat"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_chat_mode"
+                style="@style/BaseSettingsSubTitleStyles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/base_settings_chat_mode"
+                app:layout_constraintStart_toStartOf="@id/tv_chat"
+                app:layout_constraintTop_toBottomOf="@id/tv_chat" />
+
+            <Spinner
+                android:id="@+id/spinner_chat_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:entries="@array/chat_mode"
+                app:layout_constraintStart_toStartOf="@+id/tv_chat_mode"
+                app:layout_constraintTop_toBottomOf="@+id/tv_chat_mode" />
+
+            <ImageView
+                android:id="@+id/img_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/ic_arrow_down"
+                app:layout_constraintBottom_toBottomOf="@+id/spinner_chat_mode"
+                app:layout_constraintEnd_toEndOf="@+id/spinner_chat_mode"
+                app:layout_constraintTop_toTopOf="@+id/spinner_chat_mode" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_content"
+            style="@style/BaseSettingsStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_content"
+                style="@style/BaseSettingsTitleStyles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/base_settings_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_language"
+                style="@style/BaseSettingsSubTitleStyles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/base_settings_language"
+                app:layout_constraintStart_toStartOf="@id/tv_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_content" />
+
+            <Spinner
+                android:id="@+id/spinner_language_mode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:entries="@array/language_mode"
+                app:layout_constraintEnd_toStartOf="@+id/spinner_city_mode"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_language" />
+
+            <Spinner
+                android:id="@+id/spinner_city_mode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:entries="@array/city_mode"
+                app:layout_constraintBottom_toBottomOf="@id/spinner_language_mode"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/spinner_language_mode"
+                app:layout_constraintTop_toTopOf="@id/spinner_language_mode" />
+
+            <ImageView
+                android:id="@+id/img_language_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/ic_arrow_down"
+                app:layout_constraintBottom_toBottomOf="@+id/spinner_language_mode"
+                app:layout_constraintEnd_toEndOf="@+id/spinner_language_mode"
+                app:layout_constraintTop_toTopOf="@+id/spinner_language_mode" />
+
+            <ImageView
+                android:id="@+id/img_city_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/ic_arrow_down"
+                app:layout_constraintBottom_toBottomOf="@+id/spinner_city_mode"
+                app:layout_constraintEnd_toEndOf="@+id/spinner_city_mode"
+                app:layout_constraintTop_toTopOf="@+id/spinner_city_mode" />
+
+
+            <TextView
+                android:id="@+id/tv_city"
+                style="@style/BaseSettingsSubTitleStyles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/base_settings_city"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_language"
+                app:layout_constraintStart_toStartOf="@+id/spinner_city_mode"
+                app:layout_constraintTop_toTopOf="@+id/tv_language" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_app"
+            style="@style/BaseSettingsStyle"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_app"
+                style="@style/BaseSettingsTitleStyles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/base_settings_app"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView6"
+                style="@style/BaseSettingsSubTitleStyles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/base_settings_background"
+                app:layout_constraintStart_toStartOf="@id/tv_app"
+                app:layout_constraintTop_toBottomOf="@id/tv_app" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/btn_background"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/base_settings_dynamic"
+                style="@style/SettingsCheckBox"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_sound"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/btn_sound"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/base_settings_on"
+                style="@style/SettingsCheckBox"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btn_background"
+                app:layout_constraintTop_toTopOf="@+id/btn_background" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

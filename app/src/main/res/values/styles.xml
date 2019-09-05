@@ -11,6 +11,7 @@
         <item name="android:textColor">@color/color_white</item>
         <item name="editTextColor">@android:color/darker_gray</item>
         <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="spinnerStyle">@style/PhSpinner</item>
     </style>
     
     <style name="LoginEditText" parent="Widget.AppCompat.EditText">
@@ -56,16 +57,54 @@
     </style>
 
     <style name="CollapsedTitleStyle" parent="@android:style/TextAppearance">
-        <!-- Customize your theme here. -->
         <item name="android:textColor">@android:color/transparent</item>
         <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="ExpandedTitleStyle" parent="@android:style/TextAppearance">
-        <!-- Customize your theme here. -->
         <item name="android:textColor">@android:color/transparent</item>
         <item name="android:textSize">24sp</item>
         <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BaseSettingsStyle">
+        <item name="android:background">@drawable/base_settings_bg</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <style name="BaseSettingsTitleStyles" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+    </style>
+
+    <style name="BaseSettingsSubTitleStyles" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+    </style>
+
+    <style name="PhSpinner" parent="Widget.AppCompat.Spinner">
+        <item name="android:background">@drawable/dark_btn_state</item>
+        <item name="android:dropDownSelector">@color/color_dark_bg</item>
+        <item name="android:spinnerMode">dialog</item>
+        <item name="android:spinnerItemStyle">@color/color_dark_bg</item>
+        <item name="android:minHeight">20dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:paddingEnd">30dp</item>
+        <item name="android:paddingRight">30dp</item>
+    </style>
+
+    <!--Checkbox-->
+    <style name="SettingsCheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/checkbox_settings_bg</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">4dp</item>
     </style>
 </resources>
