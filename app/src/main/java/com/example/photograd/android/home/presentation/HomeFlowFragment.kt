@@ -14,8 +14,10 @@ import com.example.photograd.android.home.domain.HomeFlowPresenter
 import com.example.photograd.android.home.domain.HomeFlowView
 import com.example.photograd.android.home.games.presentation.CurrentGamesFragment
 import com.example.photograd.android.home.games.presentation.MissionsFragment
+import com.example.photograd.android.home.profile.presentation.ProfileFragment
 import com.example.photograd.android.home.ratings.presentation.FriendsRatingFragment
 import com.example.photograd.android.home.ratings.presentation.RatingFragment
+import com.example.photograd.android.home.settings.BaseSettingsFragment
 import com.example.photograd.android.home.store.presentation.StoreCategoryFragment
 import com.example.photograd.android.utils.DataHolder
 import com.google.android.material.tabs.TabLayout
@@ -109,6 +111,11 @@ class HomeFlowFragment : BaseFragment(), HomeFlowView, Tagger {
         addPagerElement(RatingFragment.TAG)
         binding.tabLayoutMain.addTab(binding.tabLayoutMain.newTab().setText(R.string.tab_friends_rating))
         addPagerElement(FriendsRatingFragment.TAG)
+        binding.tabLayoutMain.addTab(binding.tabLayoutMain.newTab().setText(R.string.tab_base_settings))
+        addPagerElement(BaseSettingsFragment.TAG)
+
+        binding.tabLayoutMain.addTab(binding.tabLayoutMain.newTab().setText(R.string.tab_profile))
+        addPagerElement(ProfileFragment.TAG)
 
         binding.tabLayoutMain.addTab(binding.tabLayoutMain.newTab().setText(R.string.tab_achievements))
         binding.tabLayoutMain.addTab(binding.tabLayoutMain.newTab().setText(R.string.tab_games_history))
