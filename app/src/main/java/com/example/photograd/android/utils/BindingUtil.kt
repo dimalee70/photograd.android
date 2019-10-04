@@ -1,12 +1,15 @@
 package com.example.photograd.android.utils
 
 import android.content.Context
+import android.graphics.Typeface
 import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
@@ -80,9 +83,9 @@ object BindingUtil {
 
         Glide
             .with(view.context)
-            .load("https://sun9-2.userapi.com/c847220/v847220070/1e2b5d/lI4r08edp3E.jpg")
-            .centerCrop()
-            .diskCacheStrategy(DiskCacheStrategy.NONE)
+//            .load("https://sun9-2.userapi.com/c847220/v847220070/1e2b5d/lI4r08edp3E.jpg")
+            .load(url)
+            .error(R.drawable.ic_empty_star)
             .transform(RoundedCorners(14))
             .placeholder(circularProgressDrawable)
             .into(view)
@@ -181,6 +184,34 @@ object BindingUtil {
                 setImageResource(R.drawable.ic_empty_star)
             }
             addView(image, params)
+        }
+    }
+
+    @JvmStatic
+    @BindingAdapter("scoreColor")
+    fun setScoreColor(view: TextView, score: String?) {
+        score ?: return
+
+        val userScore = score[0].toInt()
+        val opponentScore = score[2].toInt()
+
+        val scoreColor = when {
+            userScore > opponentScore -> R.color.color_winning_score
+            userScore < opponentScore -> R.color.color_loosing_score
+            else -> R.color.color_draw_score
+        }
+
+        view.setTextColor(ContextCompat.getColor(view.context, scoreColor))
+    }
+
+    @JvmStatic
+    @BindingAdapter("turn")
+    fun setTurnStyle(view: TextView, isUserTurn: Boolean?) {
+        isUserTurn ?: return
+        if(isUserTurn){
+            view.setTextColor(ContextCompat.getColor(view.context, R.color.color_your_turn))
+            view.text = view.context.getString(R.string.current_games_your_turn)
+            view.typeface = Typeface.DEFAULT
         }
     }
 }

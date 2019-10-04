@@ -1,4 +1,4 @@
-package com.example.photograd.android.home.games.gameflow.game.presentation
+package com.example.photograd.android.home.games.gameflow.current.presentation
 
 
 import android.os.Bundle
@@ -9,16 +9,16 @@ import androidx.databinding.DataBindingUtil
 import com.example.photograd.android.R
 import com.example.photograd.android.base.BaseFragment
 import com.example.photograd.android.databinding.FragmentGameBinding
-import com.example.photograd.android.home.games.gameflow.game.domain.GamePresenter
-import com.example.photograd.android.home.games.gameflow.game.domain.GameView
+import com.example.photograd.android.home.games.gameflow.current.domain.GamePresenter
+import com.example.photograd.android.home.games.gameflow.current.domain.GameView
 import moxy.presenter.InjectPresenter
 
 
-class GameFragment : BaseFragment(), GameView {
+class CurrentGameFragment : BaseFragment(), GameView {
 
     companion object {
-        const val TAG: String = "GameFragment"
-        fun newInstance() = GameFragment()
+        const val TAG: String = "CurrentGameFragment"
+        fun newInstance() = CurrentGameFragment()
     }
 
 

@@ -43,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/gameFlowFragment"
-        android:name="com.example.photograd.android.home.games.gameflow.GameFLowFragment"
+        android:name="com.example.photograd.android.home.games.gameflow.presentation.GameFLowFragment"
         android:label="GameFragment" />
     <fragment
         android:id="@+id/offersFlow"

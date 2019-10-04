@@ -1,4 +1,4 @@
-package com.example.photograd.android.home.games.gameflow
+package com.example.photograd.android.home.games.gameflow.presentation
 
 
 import android.os.Bundle
@@ -26,7 +26,8 @@ class GameFLowFragment : BaseFragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_game_flow, container, false)
-        binding.vpGames.adapter = GamesPagerAdapter(childFragmentManager!!)
+        binding.vpGames.adapter =
+            GamesPagerAdapter(childFragmentManager)
         binding.vpGames.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(binding.tabLayoutGames))
         addTabs()
 

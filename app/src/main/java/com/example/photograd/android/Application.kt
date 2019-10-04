@@ -3,6 +3,8 @@ package com.example.photograd.android
 import android.content.Context
 import androidx.multidex.MultiDexApplication
 import com.example.photograd.android.di.modules
+import org.koin.android.ext.koin.androidContext
+import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
 
 /**
@@ -18,7 +20,9 @@ class Application: MultiDexApplication() {
     override fun onCreate() {
         super.onCreate()
         startKoin {
-            modules
+            androidLogger()
+            androidContext(this@Application)
+            modules(modules)
         }
 
         appContext = applicationContext

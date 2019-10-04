@@ -9,6 +9,6 @@ import com.example.photograd.android.auth.models.User
 object DataHolder {
     var user: User? = null
     var sessionid: String? = null
-    var hasCurrentGame: Boolean = false
+    var hasCurrentGame: Boolean = true
     var hasPurchases: Boolean = false
 }

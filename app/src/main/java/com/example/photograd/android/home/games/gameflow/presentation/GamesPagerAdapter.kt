@@ -1,9 +1,9 @@
-package com.example.photograd.android.home.games.gameflow
+package com.example.photograd.android.home.games.gameflow.presentation
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
-import com.example.photograd.android.home.games.gameflow.game.presentation.GameFragment
+import com.example.photograd.android.home.games.gameflow.current.presentation.CurrentGameFragment
 import com.example.photograd.android.home.games.presentation.CurrentGamesFragment
 
 /**
@@ -13,18 +13,18 @@ import com.example.photograd.android.home.games.presentation.CurrentGamesFragmen
 class GamesPagerAdapter(
     fm: FragmentManager,
     behavior: Int = BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT,
-    private var pagesCount: Int = 2
+    private val idList: List<Int>
 ): FragmentStatePagerAdapter(fm, behavior) {
     override fun getItem(position: Int): Fragment =when(position){
-        0 -> GameFragment.newInstance()
-        1 -> GameFragment.newInstance()
-        2 -> GameFragment.newInstance()
-        3 -> GameFragment.newInstance()
-        4 -> GameFragment.newInstance()
-        5 -> GameFragment.newInstance()
+        0 -> CurrentGameFragment.newInstance()
+        1 -> CurrentGameFragment.newInstance()
+        2 -> CurrentGameFragment.newInstance()
+        3 -> CurrentGameFragment.newInstance()
+        4 -> CurrentGameFragment.newInstance()
+        5 -> CurrentGameFragment.newInstance()
         else -> CurrentGamesFragment.newInstance()
     }
 
-    override fun getCount(): Int  = 6
+    override fun getCount(): Int  = idList.size
 
 }

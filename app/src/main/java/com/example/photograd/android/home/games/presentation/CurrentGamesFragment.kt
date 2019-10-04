@@ -14,12 +14,12 @@ import com.example.photograd.android.R
 import com.example.photograd.android.base.BaseFragment
 import com.example.photograd.android.custom.RecyclerBindingAdapter
 import com.example.photograd.android.databinding.FragmentCurrentGamesBinding
-import com.example.photograd.android.home.games.data.model.Game
+import com.example.photograd.android.home.games.data.model.GameShort
 import com.example.photograd.android.home.games.domain.CurrentGamesPresenter
 import com.example.photograd.android.home.games.domain.CurrentGamesView
 import moxy.presenter.InjectPresenter
 
-class CurrentGamesFragment : BaseFragment(),CurrentGamesView, RecyclerBindingAdapter.OnItemClickListener<Game> {
+class CurrentGamesFragment : BaseFragment(),CurrentGamesView, RecyclerBindingAdapter.OnItemClickListener<GameShort> {
 
     companion object{
         const val TAG: String = "CurrentGamesFragment"
@@ -30,7 +30,7 @@ class CurrentGamesFragment : BaseFragment(),CurrentGamesView, RecyclerBindingAda
     lateinit var presenter: CurrentGamesPresenter
 
     lateinit var binding: FragmentCurrentGamesBinding
-    private lateinit var gamesAdapter: RecyclerBindingAdapter<Game>
+    private lateinit var gamesAdapter: RecyclerBindingAdapter<GameShort>
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,16 +56,15 @@ class CurrentGamesFragment : BaseFragment(),CurrentGamesView, RecyclerBindingAda
         gamesAdapter.setOnItemClickListener(this)
         binding.rvCurrentGames.adapter = gamesAdapter
         binding.rvCurrentGames.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, true)
-        gamesAdapter.setItems(listOf(
-            Game(),
-            Game()
-        ))
-        gamesAdapter.notifyDataSetChanged()
+        presenter.getCurrentGames()
 
         return binding.root
     }
 
-    override fun onItemClick(position: Int, item: Game) {
+    override fun showCurrentGames(games: List<GameShort>) {
+        gamesAdapter.setItems(games)
+    }
+    override fun onItemClick(position: Int, item: GameShort) {
         activity.navController.navigate(R.id.gameFlowFragment)
     }
 }

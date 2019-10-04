@@ -6,14 +6,14 @@
     <data>
         <variable
             name="presenter"
-            type="com.example.photograd.android.home.games.gameflow.game.domain.GamePresenter" />
+            type="com.example.photograd.android.home.games.gameflow.current.domain.GamePresenter" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorAccent"
-        tools:context=".home.games.gameflow.game.presentation.GameFragment">
+        tools:context=".home.games.gameflow.current.presentation.CurrentGameFragment">
 
 
         <TextView

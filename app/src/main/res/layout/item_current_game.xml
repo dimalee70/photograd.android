@@ -4,9 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+        <import type="photograd.kz.photograd.models.enums.GameType" />
         <variable
             name="game"
-            type="com.example.photograd.android.home.games.data.model.Game" />
+            type="com.example.photograd.android.home.games.data.model.GameShort" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -30,7 +31,7 @@
                 android:layout_marginTop="4dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:userImg="@{``}" />
+                app:userImg="@{game.opponent.avatar_url}" />
 
             <TextView
                 android:id="@+id/tv_turn"
@@ -38,7 +39,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:text="@string/current_games_your_turn"
+                android:text="@string/current_games_opponent_turn"
+                app:turn="@{game.is_player_turn}"
                 app:layout_constraintBottom_toTopOf="@+id/tv_username"
                 app:layout_constraintStart_toEndOf="@id/img_user"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -49,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:fontFamily="@font/montserrat_semi_bold"
-                android:text="not_wokrey"
+                android:text="@{game.opponent.username}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@id/tv_turn"
                 app:layout_constraintTop_toBottomOf="@+id/tv_turn" />
@@ -59,7 +61,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="4:3"
+                android:text="@{game.score}"
+                app:scoreColor="@{game.score}"
                 android:textSize="30sp"
                 app:layout_constraintBottom_toTopOf="@+id/tv_round"
                 app:layout_constraintEnd_toEndOf="@+id/tv_round"
@@ -73,7 +76,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="8dp"
-                android:text="Раунд 2"
+                android:text="@{`Раунд ` + game.active_round}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_score" />
@@ -95,7 +98,7 @@
                 android:layout_marginLeft="4dp"
                 android:background="@drawable/current_games_rating_bg"
                 android:gravity="center"
-                android:text="1344"
+                android:text="@{String.valueOf(game.player1.rating)}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -117,7 +120,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginLeft="4dp"
-                android:text="3"
+                app:gone="@{game.game_type != GameType.TYPE_MISSION}"
+                android:text="@{String.valueOf(game.mission_reward)}"
+                android:fontFamily="@font/montserrat_semi_bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/tv_type"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -130,6 +135,7 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
                 android:scaleType="centerCrop"
+                app:gone="@{game.game_type != GameType.TYPE_MISSION}"
                 android:src="@drawable/apple"
                 app:layout_constraintBottom_toBottomOf="@id/tv_apple_count"
                 app:layout_constraintDimensionRatio="H,1:1"
@@ -143,7 +149,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
                 android:fontFamily="@font/montserrat_semi_bold"
-                android:text="03:59:53"
+                android:text="@{String.valueOf(game.time_left)}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

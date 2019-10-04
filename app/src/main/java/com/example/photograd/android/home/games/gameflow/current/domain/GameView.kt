@@ -1,4 +1,4 @@
-package com.example.photograd.android.home.games.gameflow.game.domain
+package com.example.photograd.android.home.games.gameflow.current.domain
 
 import com.example.photograd.android.base.BaseView
 

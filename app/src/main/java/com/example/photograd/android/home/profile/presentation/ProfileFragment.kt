@@ -10,9 +10,10 @@ import com.example.photograd.android.R
 import com.example.photograd.android.base.BaseFragment
 import com.example.photograd.android.databinding.FragmentProfileBinding
 import com.example.photograd.android.home.profile.domain.ProfilePresenter
+import com.example.photograd.android.home.profile.domain.ProfileView
 import moxy.presenter.InjectPresenter
 
-class ProfileFragment : BaseFragment() {
+class ProfileFragment : BaseFragment(), ProfileView {
 
     companion object {
         const val TAG = "ProfileFragment"
