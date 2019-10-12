@@ -15,7 +15,7 @@ object Constants {
     const val trueAlmatyCitizenThreshold = 75
     const val termsOfUseLink = "https://photograd.kz/terms-of-use.html"
     const val privacyPolicyLink = "https://photograd.kz/privacy-policy.html"
-    const val API_VERSION = "1.5"
+    const val API_VERSION = "2.0"
     const val lightTheme = "light"
     const val darkTheme = "dark"
     const val themePrefsKey = "current_theme"

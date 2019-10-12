@@ -1,5 +1,6 @@
 package com.example.photograd.android.auth.login.domain
 
+import android.util.Log
 import com.example.photograd.android.auth.login.data.DefaultLoginRepository
 import com.example.photograd.android.auth.login.data.LoginRepository
 import com.example.photograd.android.auth.login.data.model.LoginRequestModel
@@ -21,7 +22,7 @@ class LoginPresenter(
         viewState.showProgress()
 
         val model = LoginRequestModel(
-            email = email,
+            identificator = email,
             password = password,
             onesignal_player_id = "test"
         )
@@ -35,11 +36,11 @@ class LoginPresenter(
                 .subscribe(
                     { result ->
                         DataHolder.user = result.user
-                        DataHolder.sessionid = result.auth.sessionid
+                        DataHolder.sessionid = result.session_id
                         viewState.showHome()
                     },
                     {
-
+                       Log.d("login", it.localizedMessage!!)
                     }
                 )
         )

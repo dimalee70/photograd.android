@@ -26,8 +26,8 @@ class GameFLowFragment : BaseFragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_game_flow, container, false)
-        binding.vpGames.adapter =
-            GamesPagerAdapter(childFragmentManager)
+        val test = listOf(1,2,3,4,5,6,7)
+        binding.vpGames.adapter = GamesPagerAdapter(childFragmentManager, idList = test)
         binding.vpGames.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(binding.tabLayoutGames))
         addTabs()
 
