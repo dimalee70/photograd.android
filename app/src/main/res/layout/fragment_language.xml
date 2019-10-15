@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -17,23 +17,55 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <RadioButton
-                style="@style/LangBtnStyle"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/login_field_height"
-                android:text="@string/login_russian" />
+                <RadioButton
+                    android:id="@+id/russianRb"
+                    style="@style/LangBtnStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/login_field_height"
+                    android:text="@string/login_russian"
+                    android:drawableStart="@drawable/ic_russian"
+                    android:drawableLeft="@drawable/ic_russian"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="40dp"
+                    android:paddingRight="40dp"
+                    android:paddingLeft="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+
+
+                <RadioButton
+                    android:id="@+id/kazakhRb"
+                    style="@style/LangBtnStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/login_field_height"
+                    android:text="@string/login_kazakh"
+                    android:drawableStart="@drawable/ic_kazakh"
+                    android:drawableLeft="@drawable/ic_kazakh"
+                    android:paddingEnd="30dp"
+                    android:paddingStart="10dp"
+                    android:paddingRight="30dp"
+                    android:paddingLeft="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
 
             <RadioButton
                 style="@style/LangBtnStyle"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/login_field_height"
-                android:text="@string/login_kazakh" />
-
-            <RadioButton
-                style="@style/LangBtnStyle"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/login_field_height"
-                android:text="@string/login_english" />
+                android:text="@string/login_english"
+                android:drawableStart="@drawable/ic_english"
+                android:drawableLeft="@drawable/ic_english"
+                android:paddingRight="30dp"
+                android:paddingEnd="30dp"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
+                />
         </RadioGroup>
 
         <Button
