@@ -12,6 +12,5 @@ import moxy.viewstate.strategy.StateStrategyType
 interface LoginView: BaseView {
     fun showHome()
     fun showRegistration()
-
     fun onLoginClicked()
 }

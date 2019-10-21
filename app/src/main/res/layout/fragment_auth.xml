@@ -1,31 +1,258 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.example.photograd.android.auth.login.domain.LoginPresenter" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".auth.login.presentation.AuthFragment">
 
-        <com.example.photograd.android.custom.WrapContentViewPager
-            android:id="@+id/viewPager"
+        <EditText
+            android:id="@+id/et_login"
+            style="@style/LoginEditText"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/tv_agreement"
+            android:layout_height="@dimen/login_field_height"
+            android:text="kumar.akhmadiyev@gmail.com"
+            android:layout_marginTop="10dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintVertical_bias="0.4"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_agreement"
+        <EditText
+            android:id="@+id/et_password"
+            style="@style/LoginEditText"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="@string/login_agreement_begin"
+            android:layout_height="@dimen/login_field_height"
+            android:layout_marginTop="10dp"
+            android:text="123"
+            android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@id/et_login" />
+
+        <Button
+            android:id="@+id/btn_reg"
+            style="@style/DarkBtnStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/login_field_height"
+            android:layout_marginTop="10dp"
+            android:onClick="@{(v) -> presenter.registrationClicked()}"
+            android:text="@string/login_registration"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_or" />
+
+        <ImageView
+            android:id="@+id/img_password"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:src="@drawable/ic_password"
+            app:layout_constraintBottom_toBottomOf="@+id/et_password"
+            app:layout_constraintDimensionRatio="V,1:1"
+            app:layout_constraintStart_toStartOf="@+id/et_password"
+            app:layout_constraintTop_toTopOf="@+id/et_password" />
+
+        <ImageView
+            android:id="@+id/img_user"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:src="@drawable/ic_user"
+            app:layout_constraintBottom_toBottomOf="@+id/et_login"
+            app:layout_constraintDimensionRatio="V,1:1"
+            app:layout_constraintStart_toStartOf="@+id/et_login"
+            app:layout_constraintTop_toTopOf="@+id/et_login" />
+
+        <TextView
+            android:id="@+id/tv_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/login_field_height"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/login_forgot_password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_password" />
+
+        <Button
+            android:id="@+id/btn_login"
+            style="@style/LightBtnStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:onClick="@{(v) -> presenter.loginClicked()}"
+            android:text="@string/login_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_forgot_password" />
+
+        <TextView
+            android:id="@+id/tv_or"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/login_or"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_login" />
+
+
+<!--        <com.example.photograd.android.custom.WrapContentViewPager-->
+<!--            android:id="@+id/viewPager"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/tv_agreement"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.4"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_agreement"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:gravity="center"-->
+<!--            android:text="@string/login_agreement_begin"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"/>-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
+
+<!--    <?xml version="1.0" encoding="utf-8"?>-->
+<!--<layout>-->
+
+<!--<data>-->
+
+<!--    <variable-->
+<!--        name="presenter"-->
+<!--        type="com.example.photograd.android.auth.login.domain.LoginPresenter" />-->
+<!--</data>-->
+
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:padding="@dimen/login_side_padding"-->
+<!--    tools:context=".auth.login.presentation.LoginFragment">-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/et_login"-->
+<!--        style="@style/LoginEditText"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="@dimen/login_field_height"-->
+<!--        android:text="kumar.akhmadiyev@gmail.com"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/et_password"-->
+<!--        style="@style/LoginEditText"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="@dimen/login_field_height"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:text="123"-->
+<!--        android:inputType="textPassword"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/et_login" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_reg"-->
+<!--        style="@style/DarkBtnStyle"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="@dimen/login_field_height"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:onClick="@{(v) -> presenter.registrationClicked()}"-->
+<!--        android:text="@string/login_registration"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tv_or" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/img_password"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginLeft="8dp"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:layout_marginBottom="4dp"-->
+<!--        android:src="@drawable/ic_password"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/et_password"-->
+<!--        app:layout_constraintDimensionRatio="V,1:1"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/et_password"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/et_password" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/img_user"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginLeft="8dp"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:layout_marginBottom="4dp"-->
+<!--        android:src="@drawable/ic_user"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/et_login"-->
+<!--        app:layout_constraintDimensionRatio="V,1:1"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/et_login"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/et_login" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_forgot_password"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="@dimen/login_field_height"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginLeft="8dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:layout_marginRight="8dp"-->
+<!--        android:text="@string/login_forgot_password"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/et_password" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_login"-->
+<!--        style="@style/LightBtnStyle"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:onClick="@{(v) -> presenter.loginClicked()}"-->
+<!--        android:text="@string/login_login"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tv_forgot_password" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_or"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="20dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:text="@string/login_or"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/btn_login" />-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--</layout>-->

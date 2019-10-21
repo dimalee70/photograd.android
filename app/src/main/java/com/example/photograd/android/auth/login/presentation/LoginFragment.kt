@@ -54,6 +54,7 @@ class LoginFragment : BaseFragment(), LoginView {
     }
 
     override fun showRegistration() {
-        (parentFragment as AuthFragment?)?.binding?.viewPager?.setCurrentItem(1, true)
+        println("Hello")
+//        (parentFragment as AuthFragment?)?.binding?.viewPager?.setCurrentItem(1, true)
     }
 }
