@@ -27,8 +27,8 @@ class HomeViewPagerAdapter(
 
         when (tag) {
             CurrentGamesFragment.TAG -> return CurrentGamesFragment.newInstance()
-            MissionsFragment.TAG -> return MissionsFragment.newInstance()
             DuelsFragment.TAG -> return DuelsFragment.newInstance()
+            MissionsFragment.TAG -> return MissionsFragment.newInstance()
             StoreCategoryFragment.TAG -> return StoreCategoryFragment.newInstance(id = tagger.getId(position)!!)
             RatingFragment.TAG -> return RatingFragment.newInstance()
             FriendsRatingFragment.TAG -> return FriendsRatingFragment.newInstance()

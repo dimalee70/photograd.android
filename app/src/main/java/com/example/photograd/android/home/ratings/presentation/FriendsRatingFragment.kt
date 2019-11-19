@@ -45,9 +45,9 @@ class FriendsRatingFragment : BaseFragment(), FriendsRatingView{
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_friends_rating, container, false)
-        initRecyclers()
+//        initRecyclers()
 
-        presenter.getRatings()
+//        presenter.getRatings()
         return binding.root
     }
 

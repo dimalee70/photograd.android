@@ -13,6 +13,7 @@ import com.example.photograd.android.home.data.model.OfferCategory
 import com.example.photograd.android.home.domain.HomeFlowPresenter
 import com.example.photograd.android.home.domain.HomeFlowView
 import com.example.photograd.android.home.games.presentation.CurrentGamesFragment
+import com.example.photograd.android.home.games.presentation.DuelsFragment
 import com.example.photograd.android.home.games.presentation.MissionsFragment
 import com.example.photograd.android.home.profile.presentation.ProfileFragment
 import com.example.photograd.android.home.ratings.presentation.FriendsRatingFragment
@@ -95,7 +96,7 @@ class HomeFlowFragment : BaseFragment(), HomeFlowView, Tagger {
             addPagerElement(CurrentGamesFragment.TAG)
         }
         binding.tabLayoutMain.addTab(binding.tabLayoutMain.newTab().setText(R.string.tab_duels))
-        addPagerElement(MissionsFragment.TAG)
+        addPagerElement(DuelsFragment.TAG)
 
         binding.tabLayoutMain.addTab(binding.tabLayoutMain.newTab().setText(R.string.tab_missions))
         addPagerElement(MissionsFragment.TAG)

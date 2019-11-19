@@ -117,12 +117,14 @@ object BindingUtil {
 
         Glide
             .with(view.context)
-            .load("https://sun9-42.userapi.com/c840632/v840632864/80350/U1zUNCI95ZQ.jpg")
-            .centerCrop()
+            .load(url)
+            .fitCenter()
             .diskCacheStrategy(DiskCacheStrategy.NONE)
             .transform(RoundedCorners(14))
             .placeholder(circularProgressDrawable)
             .into(view)
+//        "https://www.pond5.com/images/images_db/vlp/image-hero-poster.jpg"
+//        "https://sun9-42.userapi.com/c840632/v840632864/80350/U1zUNCI95ZQ.jpg"
     }
 
     @JvmStatic
@@ -141,6 +143,12 @@ object BindingUtil {
             .transform(RoundedCorners(14))
             .placeholder(circularProgressDrawable)
             .into(view)
+    }
+
+    @JvmStatic
+    @BindingAdapter("setRating")
+    fun setRating(view: TextView, rating: Int){
+        view.text = rating.toString()
     }
 
     @JvmStatic

@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
+import com.example.photograd.android.R
+import com.example.photograd.android.home.games.data.model.UserShort
 import java.util.ArrayList
 
 /**
@@ -38,7 +40,7 @@ class RecyclerBindingAdapter<T>(
     }
 
     override fun getItemViewType(position: Int): Int {
-
+        val item = items[position] ?: return R.layout.item_reguest_title
         return holderLayout
     }
 

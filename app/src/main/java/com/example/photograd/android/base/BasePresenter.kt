@@ -1,5 +1,8 @@
 package photograd.kz.photograd.presentation.presenter
 
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleObserver
+import androidx.lifecycle.OnLifecycleEvent
 import com.example.photograd.android.base.BaseView
 import io.reactivex.Scheduler
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -16,10 +19,23 @@ import moxy.MvpPresenter
     val disposables: CompositeDisposable = CompositeDisposable(),
     val background: Scheduler = Schedulers.io(),
     val mainThread: Scheduler = AndroidSchedulers.mainThread()
-): MvpPresenter<T>() {
+): MvpPresenter<T>(), LifecycleObserver {
 
     override fun onDestroy() {
         super.onDestroy()
+        disposables.clear()
+    }
+
+    fun attachLifecycle(lifecycle: Lifecycle) {
+        lifecycle.addObserver(this)
+    }
+
+    fun detachLifecycle(lifecycle: Lifecycle) {
+        lifecycle.removeObserver(this)
+    }
+
+    @OnLifecycleEvent(value = Lifecycle.Event.ON_DESTROY)
+    fun onPresenterDestroy() {
         disposables.clear()
     }
 }

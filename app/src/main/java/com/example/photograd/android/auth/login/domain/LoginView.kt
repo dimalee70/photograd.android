@@ -13,4 +13,5 @@ interface LoginView: BaseView {
     fun showHome()
     fun showRegistration()
     fun onLoginClicked()
+//    fun onLogin(loginType: LoginType)
 }

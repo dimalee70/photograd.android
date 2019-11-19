@@ -47,5 +47,6 @@ data class UserShort(
     val rating: Int,
     val avatar_url: String,
     val true_almatian: Boolean,
-    val special_status: Int
-)
+    val special_status: Int,
+    val score: String
+): BaseObservable(){}

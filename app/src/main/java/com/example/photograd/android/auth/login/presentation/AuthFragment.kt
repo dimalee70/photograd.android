@@ -12,7 +12,6 @@ import androidx.navigation.Navigation
 import com.example.photograd.android.R
 import com.example.photograd.android.auth.login.domain.LoginPresenter
 import com.example.photograd.android.auth.login.domain.LoginView
-import com.example.photograd.android.auth.login.presentation.LoginFragment
 import com.example.photograd.android.base.BaseFragment
 import com.example.photograd.android.databinding.FragmentAuthBinding
 import moxy.presenter.InjectPresenter
@@ -62,8 +61,15 @@ class AuthFragment : BaseFragment(), LoginView {
     }
 
 //    override fun onLogin(loginType: LoginType){
-//        println("dsdsd")
+//        var intent = Intent(context, AccountKitActivity::class.java)
+////        val configurationBuilder = createAccountKitConfiguration(loginType)
+////
+////        println("dsdsd")
 //    }
+
+
+
+
 
 
 }
