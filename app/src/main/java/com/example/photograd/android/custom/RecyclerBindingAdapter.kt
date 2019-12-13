@@ -8,6 +8,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
 import com.example.photograd.android.R
+import com.example.photograd.android.home.games.data.model.BaseMission
+import com.example.photograd.android.home.games.data.model.PartnerMission
+import com.example.photograd.android.home.games.data.model.PhotogradMission
 import com.example.photograd.android.home.games.data.model.UserShort
 import java.util.ArrayList
 
@@ -41,6 +44,12 @@ class RecyclerBindingAdapter<T>(
 
     override fun getItemViewType(position: Int): Int {
         val item = items[position] ?: return R.layout.item_reguest_title
+//        if (item is BaseMission){
+//            if (item is PartnerMission)
+//                return R.layout.item_partner_mission
+//            else if(item is PhotogradMission)
+//                return R.layout.item_photograd_mission
+//        }
         return holderLayout
     }
 

@@ -13,7 +13,14 @@
         <item name="android:fontFamily">@font/montserrat_regular</item>
         <item name="spinnerStyle">@style/PhSpinner</item>
     </style>
-    
+
+    <!-- Material application theme. -->
+<!--    <style name="MaterialCarViewTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">-->
+<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+<!--    </style>-->
+
+<!--    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">-->
+
     <style name="LoginEditText" parent="Widget.AppCompat.EditText">
         <item name="android:background">@drawable/login_et_bg</item>
         <item name="android:textSize">@dimen/login_field_text_size</item>

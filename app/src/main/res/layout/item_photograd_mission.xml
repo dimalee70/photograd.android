@@ -22,10 +22,14 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
-            android:text="@{@string/mission_description(String.valueOf(mission.threshold), String.valueOf(mission.game_amount))}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="8 из 15" />
+            app:threshold="@{mission._threshold}"
+            app:gameamount="@{mission._game_amount}"
+            />
+<!--            tools:text="8 из 15"-->
+<!--            app:winsPlyed="@{mission.wins}"-->
+<!--            android:text="@{@string/mission_description(String.valueOf(mission.threshold), String.valueOf(mission.game_amount))}"-->
 
         <TextView
             android:id="@+id/tv_status"
@@ -33,28 +37,65 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
-            android:text="@{@string/game_photograd_mission_progress(String.valueOf(mission.played), String.valueOf(mission.wins))}"
             app:layout_constraintBottom_toBottomOf="@+id/tv_aim"
             app:layout_constraintStart_toEndOf="@+id/tv_aim"
-            app:layout_constraintTop_toTopOf="@+id/tv_aim" />
+            app:layout_constraintTop_toTopOf="@+id/tv_aim"
+            />
 
-        <SeekBar
-            android:id="@+id/seekBar"
-            android:layout_width="0dp"
+        <TextView
+            android:id="@+id/playedTv"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            app:played="@{mission._played}"
+            app:layout_constraintStart_toEndOf="@+id/tv_status"
+            app:layout_constraintTop_toTopOf="@+id/tv_status"
+            />
+
+        <TextView
+            android:id="@+id/winsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            app:wins="@{mission._wins}"
+            app:layout_constraintStart_toEndOf="@+id/playedTv"
+            app:layout_constraintTop_toTopOf="@+id/playedTv"
+            />
+
+<!--        <SeekBar-->
+<!--            android:id="@+id/seekBar"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_marginEnd="8dp"-->
+<!--            android:layout_marginRight="8dp"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:thumb="@null"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/v_reward"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/v_reward"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/tv_aim"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/tv_aim"-->
+<!--            />-->
+
+        <com.example.photograd.android.custom.PlaysProgress
+            android:id="@+id/playProgress"
+            android:layout_width="0dp"
+            android:layout_height="15dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:max="@{mission.threshold}"
-            android:progressDrawable="@{mission.wins > 0 ? @drawable/mission_seekbar_progress: @drawable/transparent_seekbar_progress}"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginBottom="17dp"
             android:thumb="@null"
-            app:layout_constraintBottom_toBottomOf="@+id/v_reward"
+            app:percentageText="@{mission.percentage}"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/v_reward"
             app:layout_constraintStart_toStartOf="@+id/tv_aim"
             app:layout_constraintTop_toBottomOf="@+id/tv_aim"
-            android:secondaryProgress="@{mission.wins}"/>
-        <!--android:progress="@{mission.wins}"-->
+            />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/v_reward"
@@ -76,7 +117,7 @@
                 android:layout_marginRight="4dp"
                 android:layout_marginStart="4dp"
                 android:layout_marginLeft="4dp"
-                android:text="@{mission.reward}"
+                app:reward="@{mission._reward}"
                 app:layout_constraintBottom_toBottomOf="@+id/img_apple"
                 app:layout_constraintEnd_toStartOf="@+id/img_apple"
                 app:layout_constraintHorizontal_bias="0.5"

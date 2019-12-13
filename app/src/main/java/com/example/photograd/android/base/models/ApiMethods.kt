@@ -14,6 +14,7 @@ object ApiMethods {
     const val USER_AUTH = "user_auth"
     const val GET_CURRENT_GAMES = "get_current_games"
     const val GET_MISSIONS_DATA = "get_missions_data"
+    const val GET_MISSIONS = "get_missions"
     const val GET_FRIENDS = "get_friends"
     const val GET_DATA = "get_data"
     const val GET_USER_STATISTICS = "get_user_statistics"

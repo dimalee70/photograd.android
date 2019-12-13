@@ -19,6 +19,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.example.photograd.android.BR
 import com.example.photograd.android.R
+import com.example.photograd.android.custom.PlaysProgress
 import com.example.photograd.android.custom.RoundedCornersTransformation
 import com.google.android.material.shape.RoundedCornerTreatment
 
@@ -220,6 +221,47 @@ object BindingUtil {
             view.setTextColor(ContextCompat.getColor(view.context, R.color.color_your_turn))
             view.text = view.context.getString(R.string.current_games_your_turn)
             view.typeface = Typeface.DEFAULT
+        }
+    }
+
+    @JvmStatic
+    @BindingAdapter(value = ["threshold", "gameamount"], requireAll = false)
+    fun TextView.setWinsPlyed(threshold: Int, gameamount: Int){
+        text = threshold.toString() + " " + context.resources.getString(R.string.from) + " " + gameamount.toString()
+    }
+
+    @JvmStatic
+    @BindingAdapter("played")
+    fun TextView.setPlayed(played: Int){
+        text = context.resources.getString(R.string.played) + " " + played.toString()
+    }
+
+    @JvmStatic
+    @BindingAdapter("wins")
+    fun TextView.setWins(wins: Int){
+        text = context.resources.getString(R.string.wins) + " " + wins.toString()
+    }
+
+    @JvmStatic
+    @BindingAdapter("reward")
+    fun TextView.setReward(reward: Int){
+        text = reward.toString()
+    }
+
+//    @JvmStatic
+//    @BindingAdapter(value = ["thresholdProgress", "gameamountProgresss"])
+//    fun PlaysProgress.setPlayProgress(thresholdProgress: Int, gameamountProgresss: Int){
+//        if(thresholdProgress != null && gameamountProgresss != null){
+//            var percentage: Float = ((gameamountProgresss * 100)/ thresholdProgress).toFloat()/100
+//            setRatio(percentage)
+//        }
+//    }
+
+    @JvmStatic
+    @BindingAdapter("percentageText")
+    fun PlaysProgress.setPercentBackground(percentage: Float?){
+        if(percentage != null){
+            setRatio(percentage)
         }
     }
 }
